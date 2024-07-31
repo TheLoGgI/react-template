@@ -1,18 +1,12 @@
-import { useQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router'
+import { getData } from '../hooks/data/getData';
 
 export const Route = createFileRoute('/about')({
     component: AboutComponent,
 })
 
 function AboutComponent() {
-    const { isPending, error, data } = useQuery({
-        queryKey: ['repoData'],
-        queryFn: () =>
-            fetch('https://api.github.com/repos/TanStack/query').then((res) =>
-                res.json(),
-            ),
-    })
+    const { isPending, error, data } = getData()
     console.log('data: ', data);
     return (
         <div
