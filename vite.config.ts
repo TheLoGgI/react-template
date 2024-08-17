@@ -7,9 +7,6 @@ const isTest = process.env.NODE_ENV === 'test'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // resolve: {
-  //   preserveSymlinks: true
-  // },
   resolve: {
     alias: {
       // '@': path.resolve(__dirname, './src'),

@@ -8,9 +8,6 @@ export const Route = createRootRoute({
 function RootComponent() {
     return (
         <>
-
-
-
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
